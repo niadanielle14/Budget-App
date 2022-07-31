@@ -25,6 +25,10 @@ body {
 .budget-header{
 
 }
+button.link {
+    background: none;
+    border: none;
+}
 
 .budget-header .balance{
     margin-top: 45px;
@@ -80,12 +84,12 @@ body {
 
 /*/////////////   DASHBOARD    /////////////*/
 .budget-dashboard{
-    /*!*display: block;*!*/
-    /*width: 360px;*/
-    /*height: 470px;*/
-    /*background-color: #FFF;*/
-    /*margin-top: 35px;*/
-    /*border-radius: 30px 30px 0 0;*/
+    /*display: block;*/
+    width: 360px;
+    height: 470px;
+    background-color: #FFF;
+    margin-top: 35px;
+    border-radius: 30px 30px 0 0;
 }
 
 .budget-dashboard .dash-title{
@@ -178,7 +182,7 @@ body {
     height: 20px;
     right: 20px;
     cursor: pointer;
-    /*background-image: url('icon/trash.png');*/
+    background-image: url('icon/trash.png');
     background-size: 20px 20px;
     background-repeat: no-repeat;
 }
@@ -277,7 +281,7 @@ body {
     height: 20px;
     right: 50px;
     cursor: pointer;
-    /*background-image: url("icon/edit.png");*/
+    background-image: url("icon/edit.png");
     background-size: 20px 20px;
     background-repeat: no-repeat;
 }
@@ -288,7 +292,7 @@ body {
     height: 20px;
     right: 20px;
     cursor: pointer;
-    /*background-image: url('icon/trash.png');*/
+    background-image: url('icon/trash.png');
     background-size: 20px 20px;
     background-repeat: no-repeat;
 }

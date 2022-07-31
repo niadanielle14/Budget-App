@@ -53,38 +53,29 @@ allBtn.addEventListener("click", function(){
     active(allBtn);
     inactive([expenseBtn, incomeBtn]);
 })
-
-// Functions to show, hide, active, and inactive
-function show(element){
-    element.classList.remove("hide");
-}
- function hide(elements){
-    elements.forEach(element => {
-        element.classList.add("hide");
-    })
- }
-
-function active(element){
-    element.classList.add("active");
-}
-function inactive(elements){
-    elements.forEach(element => {
-        element.classList.remove("inactive");
-    })
-}
-
-
-
-
-
-
-
-// addIncome.addEventListener("click", function(){
+addExpense.addEventListener("click", function(){
+// IF ONE OF THE INPUTS IS EMPTY, RETURN EXIT
+    if(!expenseTitle || !expenseAmount ) return;
+    // SAVE THE ENTRY TO ENTRY_LIST
+    let expense = {
+    type : "expense",
+    title : expenseTitle.value,
+    amount: parseInt(expenseAmount.value)
+    }
+    ENTRY_LIST.push(expense);
+})
+addIncome.addEventListener("click", function(){
+// IF ONE OF THE INPUTS IS EMPTY, RETURN EXIT
+    if(!incomeTitle || !incomeAmount ) return;
+    // SAVE THE ENTRY TO ENTRY_LIST
+    let income = {
+        type : "income",
+        title : incomeTitle.value,
+        amount: parseInt(incomeAmount.value)
+    }
+    ENTRY_LIST.push(income);
+})
 //
-// })
-// addExpense.addEventListener("click", function(){
-//
-// })
 // incomeList.addEventListener("click", function(){
 //
 // })
@@ -94,3 +85,36 @@ function inactive(elements){
 // allList.addEventListener("click", function(){
 //
 // })
+
+
+
+
+
+
+
+
+// Functions to show, hide, active, and inactive
+function show(element){
+    element.classList.remove("hide");
+}
+ function hide(elements ){
+    elements.forEach(element => {
+        element.classList.add("hide");
+    })
+ }
+
+function active(element){
+    element.classList.add("active");
+}
+function inactive(elements ){
+    elements.forEach(element => {
+        element.classList.remove("active");
+    })
+}
+
+
+
+
+
+
+
