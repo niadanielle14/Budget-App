@@ -1,33 +1,65 @@
-body {
-    background-color: green;
+@font-face {
+    font-family: 'sans-serif';
+    font-weight: bold;
+    font-style: normal;
 }
-.budget-container {
+@font-face {
+    font-family: 'serif';
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+    background-color: #222;
+    font-family: 'sans-serif';
+}
+
+*{
+    font-family: 'sans-serif';
+    list-style: none;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* REMOVE SPINNERS FROM NUMBER INPUT */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.budget-container{
     position: absolute;
     width: 360px;
     height: 780px;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    background-color: #34006a;
 }
 
-.budget-container .app-title {
+.budget-container .app-title{
     margin-top: 45px;
     margin-left: 20px;
-    font-size: larger;
 }
+
 .budget-container .app-title a{
     color: #FFF;
 }
 .budget-container .app-title a b{
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
 }
 
 .budget-header{
 
-}
-button.link {
-    background: none;
-    border: none;
 }
 
 .budget-header .balance{
@@ -38,14 +70,14 @@ button.link {
 .budget-header .balance .title{
     color: #FFF;
     font-size: 1em;
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
 }
 
 .budget-header .balance .value{
     color: #FFF;
     font-size: 2em;
     margin-top: 10px;
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
 }
 
 .budget-header .account{
@@ -70,7 +102,7 @@ button.link {
 }
 .budget-header .account .income .income-total{
     color: #FFF;
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
 }
 
 .budget-header .account .outcome .title{
@@ -79,12 +111,12 @@ button.link {
 }
 .budget-header .account .outcome .outcome-total{
     color: #f0624d;
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
 }
 
 /*/////////////   DASHBOARD    /////////////*/
 .budget-dashboard{
-    /*display: block;*/
+    display: block;
     width: 360px;
     height: 470px;
     background-color: #FFF;
@@ -98,7 +130,7 @@ button.link {
     font-size: 1.7em;
     margin-left: 20px;
     margin-top: 30px;
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
 }
 
 .toggle{
@@ -112,7 +144,7 @@ button.link {
     cursor: pointer;
     font-size: 1.1em;
     color: #1a0034;
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
     opacity: 0.4;
 }
 
@@ -169,7 +201,7 @@ button.link {
     padding-left: 20px;
     margin-bottom: 10px;;
     word-wrap: break-word;
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
 }
 
 .budget-dashboard #all ul.list li #edit{
@@ -219,7 +251,7 @@ button.link {
     width : 150px;
     padding-left: 10px;
     font-size: 1.2em;
-    /*font-family: 'Gilroy';*/
+    font-family: 'sans-serif';
     margin: 5px;
     margin-left: 10px;
     border-radius: 10px 0 0 10px;
@@ -231,7 +263,7 @@ button.link {
     width : 110px;
     padding-left: 10px;
     font-size: 1.2em;
-    /*font-family: 'Gilroy';*/
+    font-family: 'sans-serif';
     margin: 5px;
     margin-left: -10px;
     border-radius: 0 10px 10px 0;
@@ -271,7 +303,7 @@ button.link {
     padding-left: 20px;
     margin-bottom: 10px;;
     word-wrap: break-word;
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
     color: #f0624d;
 }
 
@@ -322,7 +354,7 @@ button.link {
     width : 150px;
     padding-left: 10px;
     font-size: 1.2em;
-    font-family: 'Gilroy';
+    font-family: 'sans-serif';
     margin: 5px;
     margin-left: 10px;
     border-radius: 10px 0 0 10px;
@@ -334,7 +366,7 @@ button.link {
     width : 110px;
     padding-left: 10px;
     font-size: 1.2em;
-    font-family: 'Gilroy';
+    font-family: 'sans-serif';
     margin: 5px;
     margin-left: -10px;
     border-radius: 0 10px 10px 0;
@@ -374,7 +406,7 @@ button.link {
     padding-left: 20px;
     margin-bottom: 10px;;
     word-wrap: break-word;
-    /*font-family: 'Gilroy Bold';*/
+    font-family: 'serif';
 }
 
 .budget-dashboard #income ul.list li #edit{
@@ -383,6 +415,7 @@ button.link {
     height: 20px;
     right: 50px;
     cursor: pointer;
+    background-image: url("icon/edit.png");
     background-size: 20px 20px;
     background-repeat: no-repeat;
 }
@@ -393,6 +426,7 @@ button.link {
     height: 20px;
     right: 20px;
     cursor: pointer;
+    background-image: url('icon/trash.png');
     background-size: 20px 20px;
     background-repeat: no-repeat;
 }

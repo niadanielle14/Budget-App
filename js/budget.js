@@ -55,7 +55,7 @@ allBtn.addEventListener("click", function(){
 })
 addExpense.addEventListener("click", function(){
 // IF ONE OF THE INPUTS IS EMPTY, RETURN EXIT
-    if(!expenseTitle || !expenseAmount ) return;
+    if(!expenseTitle.value || !expenseAmount.value ) return;
     // SAVE THE ENTRY TO ENTRY_LIST
     let expense = {
     type : "expense",
@@ -66,7 +66,7 @@ addExpense.addEventListener("click", function(){
 })
 addIncome.addEventListener("click", function(){
 // IF ONE OF THE INPUTS IS EMPTY, RETURN EXIT
-    if(!incomeTitle || !incomeAmount ) return;
+    if(!incomeTitle.value || !incomeAmount.value ) return;
     // SAVE THE ENTRY TO ENTRY_LIST
     let income = {
         type : "income",
